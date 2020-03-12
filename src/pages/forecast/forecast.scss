@@ -1,0 +1,22 @@
+.forecast{
+  font-size: 24px;
+  background-color: #fff;
+  .forecast-info{
+    display: flex;
+    padding: 40px 0;
+    // border-bottom: 1px solid #ccc;
+  }
+  .box{
+    flex: 1;
+    vertical-align: middle;
+    padding: 0 20px;
+  }
+  .column{
+    display: flex;
+    justify-content: space-between;
+    line-height: 48px;
+  }
+  .box-left{
+    border-right: 1px solid #cccccc;
+  }
+}

@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  text-align: center;
+  padding: 12px 0;
+  color: #fff;
+  .header-left{
+    width: 100%;
+    margin-left: 50px;
+  }
+  .header-right{
+    width: 50px;
+    text-align: center;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+}

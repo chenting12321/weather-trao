@@ -1,0 +1,25 @@
+
+.index{
+  background-color: #f4f4f8;
+  width: 100%;
+  overflow-x: hidden;
+  .top-info{
+    height: 762px;
+    background-color: #8baefa;
+    padding: 0 16px;
+    color: #fff;
+  }
+  .release{
+    text-align: center;
+  }
+  .air-quality{
+    min-width: 68px;
+    display: inline-block;
+    background: red;
+    height: 63px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 7px;
+  }
+}
