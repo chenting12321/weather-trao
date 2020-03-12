@@ -119,6 +119,7 @@ function TrendDetails(props) {
         }
       </View>
       
+      
       <View className="center">
           {JSON.stringify(option) !== '{}' && <Echart option={option} style={'height: 150px'} />}
       </View>
