@@ -94,6 +94,9 @@ function Index() {
       <Timedetails weatherList={weatherList}></Timedetails>
       <Trenddetails weatherList={weatherList}></Trenddetails>
       <Reminder weatherList={weatherList}></Reminder>
+      <View className="data-desc">
+        数据来源于中国天气网
+      </View>
     </View>
   )
 }

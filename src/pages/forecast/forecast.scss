@@ -9,7 +9,7 @@
   .box{
     flex: 1;
     vertical-align: middle;
-    padding: 0 20px;
+    padding: 0 30px;
   }
   .column{
     display: flex;
@@ -17,6 +17,6 @@
     line-height: 48px;
   }
   .box-left{
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #f1efef;
   }
 }

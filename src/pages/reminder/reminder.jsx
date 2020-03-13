@@ -26,9 +26,13 @@ function Reminder(props) {
   }, [props.weatherList])
 
   return (
-    <Swiper indicatorDots="true" className="reminder">
+    <Swiper className="reminder"
+      indicatorDots="true" 
+      indicatorColor="rgba(194, 191, 191, .4)"
+      indicatorActiveColor="rgb(194, 191, 191)"
+    >
       <SwiperItem>
-        <View class="swiper-item" >
+        <View class="swiper-item">
           {
             arr && arr.slice(0, 4).map((r, i) => {
               return (
