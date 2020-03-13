@@ -7,7 +7,7 @@ import Main from '../main/main'
 import Forecast from '../forecast/forecast' // 今天明天
 import Timedetails from '../timedetails/timedetails' // 24小时详情
 import Trenddetails from '../trenddetails/trenddetails' // 图表趋势详情
-
+import Reminder from '../reminder/reminder' // 温馨提示
 function Index() {
   const wind_direction = ['东风', '', '', '西北风', ''] // 风向
   const air_bgc = ['#a3d765', '#f5d450', '#f1ab62', '#ef7f77', '#b28ccb'];
@@ -93,6 +93,7 @@ function Index() {
       <Forecast weatherList={weatherList}></Forecast>
       <Timedetails weatherList={weatherList}></Timedetails>
       <Trenddetails weatherList={weatherList}></Trenddetails>
+      <Reminder weatherList={weatherList}></Reminder>
     </View>
   )
 }

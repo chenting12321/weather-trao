@@ -89,15 +89,15 @@ function TrendDetails(props) {
                 color: 'red',
                 fontSize: 14,
                 formatter: (r) => {
-                  console.log('r', r);
+                  // console.log('r', r);
                   return r.value + '°';
                 }
               }
             }
           ]
         });
-        console.log('++', time);
-        console.log('--', option);
+        // console.log('++', time);
+        // console.log('--', option);
       }
     }
   }, [props.weatherList])
@@ -112,7 +112,7 @@ function TrendDetails(props) {
                 <View className="c-666">{k.title}</View>
                 <View className="c-666">{k._time.format('MM/DD')}</View>
                 <View className={index ? 'l-60 ' : 'l-60 c-666'}>{k.day_weather}</View>
-                <IconFont className="l-60" name={common.getIconStr(k.day_weather_code).iconName} size="45" />
+                <View><IconFont className="l-60" name={common.getIconStr(k.day_weather_code).iconName} size="45" /></View>
               </View>
             )
           })
