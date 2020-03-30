@@ -1,0 +1,30 @@
+.content{
+  margin: 10px 20px;
+}
+.title{
+  margin-top: 20px;
+}
+.his-title{
+  display: flex;
+  justify-content: space-between;
+}
+.box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.itemStyle{
+  width: 31.3%;
+  font-size: 24px;
+  background-color: #ebebeb;
+  border-radius: 30px;
+  text-align: center;
+  padding: 8px 0;
+  margin: 10px 1%;
+  color: #666;
+}
+.at-search-bar__action{
+  background-color: #fff;
+  color: #666;
+}
+
+

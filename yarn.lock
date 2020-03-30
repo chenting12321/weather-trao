@@ -4347,6 +4347,11 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+echarts12@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npm.taobao.org/echarts12/download/echarts12-1.1.6.tgz#3161a7bee4fea67f10ed7d62f924f6dfdc018ba5"
+  integrity sha1-MWGnvuT+pn8Q7X1i+ST239wBi6U=
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"

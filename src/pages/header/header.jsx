@@ -10,11 +10,14 @@ function Header(props) {
       setLoction(props.weatherList.loc || {});
     }
   }, [props.weatherList]);
+  const clickMap = () => {
+    // console.log(11);
+    Taro.navigateTo({ url: '/pages/search/search' })
+  }
   return (
     <View>
       <View className="header">
-
-        <View className="header-left">
+        <View className="header-left" onClick={clickMap}>
           <AtIcon value='map-pin' size="16" className="icon"></AtIcon>
           <Text>{loction.length === 2 ? loction[0] + ' - ' + loction[1] : (loction[1] || '').trim() + ' - ' + (loction[2] || '').trim()}</Text>
         </View>
