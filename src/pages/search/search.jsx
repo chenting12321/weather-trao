@@ -13,8 +13,12 @@ function Search() {
     onActionClick() { // 点击取消按钮,返回上一个
       console.log(1)
     },
-    onChange() { // 输入框的值改变
-      console.log(2);
+    onChange(val) { // 输入框的值改变
+      console.log(!val.trim());
+      if(!val.trim()) { // 输入框值为空
+        return;
+      }
+      setInputVal('')
     }
 
   }
@@ -42,7 +46,7 @@ function Search() {
         <View>
           <View className="title his-title">
             <View>历史记录</View>
-            <AtIcon value='trash'></AtIcon>
+            <AtIcon value='trash' size="14"></AtIcon>
           </View>
           <View className="box">
             {
