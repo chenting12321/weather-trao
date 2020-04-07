@@ -5,10 +5,10 @@ import common from '../../common/common'
 import moment from '../../common/moment'
 import IconFont from '../../components/iconfont'
 import { Echart } from 'echarts12'
+// 图表块
 function TrendDetails(props) {
   const [time, setTime] = useState([])
   const [option, setOption] = useState({});
-
   useEffect(() => {
     const [arr, date, week] = [
       [], ['昨天', '今天', '明天', '后天'],
@@ -63,9 +63,8 @@ function TrendDetails(props) {
               },
               label: {
                 show: true,
-                position: 'bottom',
-                // color: '#434343',
-                color: 'green',
+                position: 'top',
+                color: '#434343',
                 fontSize: 14,
 
                 formatter: (r) => r.value + '°'
@@ -85,8 +84,8 @@ function TrendDetails(props) {
               },
               label: {
                 show: true,
-                position: 'top',
-                color: 'red',
+                position: 'bottom',
+                color: '#434343',
                 fontSize: 14,
                 formatter: (r) => {
                   // console.log('r', r);
