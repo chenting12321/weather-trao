@@ -8,27 +8,39 @@ function Search() {
   let [searchArr, setSearchArr] = useState([]) // 搜索结果列表
   let [historyArr, setHistoryArr] = useState([]) // 历史记录
   let [isShow, setIsShow] = useState(true) // 点击搜索,下方的内容显隐
-  const arr = ['普陀区', '静安区','徐汇区', '普陀区啊', '静安区','徐汇区']
-  const log = ['北京', '上海', '郑州']
+  const scenicArr = ['故宫', '颐和园','黄山', '泰山', '九寨沟', '龙门石窟']
+  const hotCity = ['北京', '上海', '深圳', '郑州']
+  let [currentLoc, setLoct] = useState('') // 当前定位
 
   // 第一次进来查找历史记录
   useDidShow(() => { // 等同于 componentDidHide 页面生命周期钩子
-    Taro.getStorage({
-      key: 'historyData',
-      success (res) {
-        console.log('try', res.data)
-        setHistoryArr(res.data);
-      }
-    })
-    // try {
-    //   var value = Taro.getStorageSync('historyData');
-    //   if (value) {
-    //     setHistoryArr(Array.from(new Set(value)));
+    // Taro.getStorage({
+    //   key: 'historyData',
+    //   success (res) {
+    //     console.log('try', res.data)
+    //     setHistoryArr(res.data);
     //   }
-    // } catch (e) {
-    //   setHistoryArr([]);
-    // }
+    // })
+
+    try {
+      var value = Taro.getStorageSync('historyData');
+      if (value) {
+        setHistoryArr(Array.from(new Set(value)));
+      }
+    } catch (e) {
+      setHistoryArr([]);
+    }
+    try {
+      var loct = Taro.getStorageSync('loct');
+      if (loct) {
+        console.log('loct', loct);
+        setLoct(loct)
+      }
+    } catch (e) {
+      console.log('错误信息', e)
+    }
   })
+  
   const clicked = {
     onActionClick() { // 点击取消按钮,返回index页面
       // Taro.navigateTo({url: '../index/index'})
@@ -62,7 +74,6 @@ function Search() {
         }
    
       })
-
 
     },
     clickChecked(index) { // 选择搜索事件
@@ -127,7 +138,7 @@ function Search() {
         <View>
           <View className="title">当前定位</View>
           <View className="itemStyle">
-            普陀区
+            {currentLoc}
           </View>
         </View>
 
@@ -170,7 +181,7 @@ function Search() {
           <View className="title">热门城市</View>
           <View className="box">
             {
-              arr.map((r, i) => {
+              hotCity.map((r, i) => {
                 return (
                   <View
                     key={i}
@@ -187,7 +198,7 @@ function Search() {
           <View className="title">热门景区</View>
           <View className="box">
             {
-              arr.map((r, i) => {
+              scenicArr.map((r, i) => {
                 return (
                   <View
                     key={i}

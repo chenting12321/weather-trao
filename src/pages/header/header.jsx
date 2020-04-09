@@ -11,8 +11,7 @@ function Header(props) {
     }
   }, [props.weatherList]);
   const clickMap = () => {
-    // console.log(11);
-    Taro.navigateTo({ url: '/pages/search/search' })
+    Taro.navigateTo({ url: '/pages/search/search'})
   }
   return (
     <View>
